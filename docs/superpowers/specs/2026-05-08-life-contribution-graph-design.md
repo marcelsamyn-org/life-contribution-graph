@@ -38,7 +38,7 @@ Sources tracked at launch:
                                                 ┌──────────────────────────┐
                                                 │  Astro + React island    │
                                                 │  Tailwind heatmap        │
-                                                │  Cloudflare Pages        │
+                                                │  Netlify (static)        │
                                                 └──────────────────────────┘
 ```
 
@@ -48,6 +48,8 @@ Sources tracked at launch:
 - Zero runtime infra. No DB to maintain, no secrets in a Worker, no migrations. Site is fully static.
 - Failure mode is benign. If a fetch fails, yesterday's JSONL still serves. Failure visible in Actions UI.
 - Cheap to throw away. Swappable to Worker + D1 in an afternoon if needed; data shape doesn't change.
+
+**Why Netlify over Cloudflare Workers Static Assets:** Cloudflare Pages is being sunset in favor of Workers Static Assets, but for a fully static site with no Worker logic, Netlify is simpler — zero config, push-to-deploy, branch preview deploys out of the box, no `wrangler.toml` to maintain. If a dynamic surface is added later (OG image generation, webhook ingestion), reconsider Workers Static Assets.
 
 **Astro over TanStack Start:** the page is 99% static with one interactive island. TanStack Start's full-stack request/response model is unused capacity here.
 
@@ -354,8 +356,8 @@ life-contribution-graph/
 │           └── http.ts
 ├── .github/workflows/
 │   ├── ingest.yml                 — every 6h
-│   ├── refresh-ig-token.yml       — weekly
-│   └── deploy.yml                 — on push to main
+│   └── refresh-ig-token.yml       — weekly
+├── netlify.toml                   — build command + bun version
 ├── docs/superpowers/specs/
 │   └── 2026-05-08-life-contribution-graph-design.md
 ├── tests/
@@ -378,8 +380,10 @@ life-contribution-graph/
 ## Build & deploy
 
 - `bun run build` → Astro static output in `app/dist/`.
-- Cloudflare Pages connects to the repo, builds with `bun run build`, deploys on every push to `main`.
-- Cron workflow's commits trigger redeploys automatically. Site is fresh within minutes of each ingest.
+- **Netlify** connects to the repo, builds with `bun run build`, publishes `app/dist/`, deploys on every push to `main`.
+- `netlify.toml` at repo root pins the bun version and build command. No GitHub Actions deploy workflow needed — Netlify's repo integration is the deploy trigger.
+- Cron workflow's commits to `main` trigger redeploys automatically. Site is fresh within minutes of each ingest.
+- Branch deploys per PR for previewing visual tweaks before merging.
 
 ## Testing strategy
 
