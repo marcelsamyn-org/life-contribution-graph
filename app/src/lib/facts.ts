@@ -1,38 +1,39 @@
+import type { Range } from './range';
 import type { Event } from './schema';
 
-export type Fact = (events: Event[], year: number) => string | null;
+export type Fact = (events: Event[], range: Range) => string | null;
 
-const inYear = (events: Event[], year: number): Event[] =>
-  events.filter((e) => e.date.startsWith(`${year}-`));
+const inRange = (events: Event[], range: Range): Event[] =>
+  events.filter((e) => e.date >= range.start && e.date <= range.end);
 
 const fmt = (n: number): string => n.toLocaleString();
 
-const countFact: Fact = (events, year) => {
-  const inY = inYear(events, year);
-  if (inY.length === 0) return null;
-  return `${fmt(inY.length)} gifts this year`;
+const countFact: Fact = (events, range) => {
+  const inR = inRange(events, range);
+  if (inR.length === 0) return null;
+  return `${fmt(inR.length)} gifts in ${range.label}`;
 };
 
-const longFormHoursFact: Fact = (events, year) => {
-  const longs = inYear(events, year).filter((e) => e.source === 'youtube_long');
+const longFormHoursFact: Fact = (events, range) => {
+  const longs = inRange(events, range).filter((e) => e.source === 'youtube_long');
   if (longs.length === 0) return null;
   const totalSec = longs.reduce((s, e) => s + ('durationSec' in e ? e.durationSec : 0), 0);
   const hours = Math.round(totalSec / 3600);
   return `${hours} hours of long-form video`;
 };
 
-const bookDaysFact: Fact = (events, year) => {
+const bookDaysFact: Fact = (events, range) => {
   const days = new Set(
-    inYear(events, year)
+    inRange(events, range)
       .filter((e) => e.source === 'book_commit')
       .map((e) => e.date),
   );
   if (days.size === 0) return null;
-  return `${days.size} days at the book this year`;
+  return `${days.size} days at the book in ${range.label}`;
 };
 
-const longestPauseFact: Fact = (events, year) => {
-  const dates = inYear(events, year)
+const longestPauseFact: Fact = (events, range) => {
+  const dates = inRange(events, range)
     .map((e) => e.date)
     .sort();
   if (dates.length < 2) return null;
@@ -47,21 +48,23 @@ const longestPauseFact: Fact = (events, year) => {
   return `your quietest stretch: ${maxGap} days`;
 };
 
-const breakdownFact: Fact = (events, year) => {
-  const inY = inYear(events, year);
-  if (inY.length === 0) return null;
-  const reels = inY.filter((e) => e.source === 'ig_reel').length;
-  const posts = inY.filter((e) => e.source === 'ig_post').length;
-  const stories = inY.filter((e) => e.source === 'ig_story').length;
+const breakdownFact: Fact = (events, range) => {
+  const inR = inRange(events, range);
+  if (inR.length === 0) return null;
+  const reels = inR.filter((e) => e.source === 'ig_reel').length;
+  const posts = inR.filter((e) => e.source === 'ig_post').length;
+  const stories = inR.filter((e) => e.source === 'ig_story').length;
   if (reels + posts + stories === 0) return null;
   return `${fmt(reels)} reels, ${fmt(posts)} posts, ${fmt(stories)} stories`;
 };
 
-const firstEventFact: Fact = (events, year) => {
-  const inY = inYear(events, year).map((e) => e.date).sort();
-  const first = inY[0];
+const firstEventFact: Fact = (events, range) => {
+  const dates = inRange(events, range)
+    .map((e) => e.date)
+    .sort();
+  const first = dates[0];
   if (!first) return null;
-  return `first gift of the year: ${first}`;
+  return `first gift in this view: ${first}`;
 };
 
 export const facts: Fact[] = [

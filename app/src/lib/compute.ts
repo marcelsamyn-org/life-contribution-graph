@@ -1,5 +1,6 @@
-import type { Event, SourceId } from './schema';
 import type { BlastFn, DayIntensity } from './blast';
+import type { Range } from './range';
+import type { Event, SourceId } from './schema';
 
 export type DayCell = { date: string; intensity: number } | null;
 
@@ -22,39 +23,50 @@ export function groupByDay(intensities: DayIntensity[]): Map<string, number> {
   return out;
 }
 
+function parseDate(yyyymmdd: string): Date {
+  const [y, m, d] = yyyymmdd.split('-').map((s) => Number.parseInt(s, 10)) as [
+    number,
+    number,
+    number,
+  ];
+  return new Date(Date.UTC(y, m - 1, d));
+}
+
 function fmtDate(date: Date): string {
-  const y = date.getUTCFullYear();
-  const m = String(date.getUTCMonth() + 1).padStart(2, '0');
-  const d = String(date.getUTCDate()).padStart(2, '0');
-  return `${y}-${m}-${d}`;
+  return date.toISOString().slice(0, 10);
 }
 
 /**
- * Returns a 53×7 grid (week-major). Week starts Sunday (column 0).
- * The grid spans the calendar year `year`. Cells outside that year are null.
+ * Returns a week-major grid (Sunday-start, column 0 = Sunday) covering `range`.
+ * Width is the minimum number of weeks needed to contain [range.start, range.end].
+ * Cells outside the range (padding before start / after end) are null.
  */
-export function yearGrid(year: number, totals: Map<string, number>): DayCell[][] {
-  const jan1 = new Date(Date.UTC(year, 0, 1));
-  const dec31 = new Date(Date.UTC(year, 11, 31));
-  const startDow = jan1.getUTCDay(); // 0=Sun..6=Sat
-  // Start grid on the Sunday on/before Jan 1.
-  const gridStart = new Date(jan1);
+export function rangeGrid(range: Range, totals: Map<string, number>): DayCell[][] {
+  const start = parseDate(range.start);
+  const end = parseDate(range.end);
+  const startDow = start.getUTCDay();
+
+  const gridStart = new Date(start);
   gridStart.setUTCDate(gridStart.getUTCDate() - startDow);
 
-  const weeks: DayCell[][] = [];
-  for (let w = 0; w < 53; w++) {
+  const totalDaysFromGridStart =
+    Math.round((end.getTime() - gridStart.getTime()) / 86_400_000) + 1;
+  const weeks = Math.ceil(totalDaysFromGridStart / 7);
+
+  const grid: DayCell[][] = [];
+  for (let w = 0; w < weeks; w++) {
     const week: DayCell[] = [];
     for (let d = 0; d < 7; d++) {
       const cur = new Date(gridStart);
       cur.setUTCDate(gridStart.getUTCDate() + w * 7 + d);
-      if (cur < jan1 || cur > dec31) {
+      if (cur < start || cur > end) {
         week.push(null);
       } else {
         const key = fmtDate(cur);
         week.push({ date: key, intensity: totals.get(key) ?? 0 });
       }
     }
-    weeks.push(week);
+    grid.push(week);
   }
-  return weeks;
+  return grid;
 }
