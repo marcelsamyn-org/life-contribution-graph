@@ -1,0 +1,8 @@
+{
+  "data": [
+    { "id": "111", "media_type": "VIDEO",         "media_product_type": "REELS", "timestamp": "2026-05-08T18:00:00+0000", "permalink": "https://instagram.com/reel/111", "caption": "reel caption" },
+    { "id": "222", "media_type": "IMAGE",         "media_product_type": "FEED",  "timestamp": "2026-05-07T20:30:00+0000", "permalink": "https://instagram.com/p/222",   "caption": "post caption" },
+    { "id": "333", "media_type": "CAROUSEL_ALBUM","media_product_type": "FEED",  "timestamp": "2026-05-06T09:00:00+0000", "permalink": "https://instagram.com/p/333" }
+  ],
+  "paging": { "next": null }
+}
