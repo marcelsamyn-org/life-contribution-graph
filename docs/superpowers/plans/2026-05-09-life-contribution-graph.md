@@ -10,6 +10,20 @@
 
 ---
 
+## Range-first model (mid-plan amendment, 2026-05-09)
+
+The whole UI/compute layer is parametrized by `Range = { start, end, label }` rather than `year: number`. Default view is "last 365 days" rolling — `rollingRange(today, 365)`. Calendar-year views are just `calendarYearRange(year)`. This unlocks the rolling view without forking the data path.
+
+Affected:
+- `app/src/lib/range.ts` — new file (Task 5b). Exports `Range`, `rollingRange(today, days = 365)`, `calendarYearRange(year)`.
+- `app/src/lib/compute.ts` — `yearGrid(year, totals)` is replaced by `rangeGrid(range, totals)`. Grid width is variable: `ceil(spanFromGridStart / 7)` weeks, where `gridStart = Sunday on/before range.start`. Cells outside `[range.start, range.end]` are `null`.
+- `app/src/lib/facts.ts` — `Fact = (events, range) => string | null`. Fact text uses `range.label` so "this year" / "last 365 days" surfaces naturally.
+- `app/src/components/Graph.tsx` — state holds `selectedRange`, defaults to `rollingRange(today, 365)`. Persist last selection in localStorage + URL hash.
+- `app/src/components/RangeSelector.tsx` — new component (Task 11). Pill row: `Last 365 · 2026 · 2025 · …`. Year list comes from years present in `events`.
+- `Minimap` still one-bar-per-year; clicking a year switches to `calendarYearRange(year)`. The "Last 365" pill is the only non-year option.
+
+---
+
 ## Tasks Overview
 
 1. Project scaffolding (bun, Astro, Tailwind, React, Biome, TS strict)
@@ -17,15 +31,16 @@
 3. Zod schemas (`app/src/lib/schema.ts`)
 4. JSONL loader (`app/src/lib/load-events.ts`)
 5. Blast functions (`app/src/lib/blast.ts`)
-6. Compute pipeline (`app/src/lib/compute.ts`)
+5b. Range model (`app/src/lib/range.ts`) — `Range` type + `rollingRange` / `calendarYearRange` constructors
+6. Compute pipeline (`app/src/lib/compute.ts`) — `rangeGrid(range, totals)`, variable-width
 7. Color scale (`app/src/lib/color.ts`)
-8. Facts (`app/src/lib/facts.ts`)
-9. `Heatmap` component
-10. `Minimap` component
-11. `SourceToggles` component
+8. Facts (`app/src/lib/facts.ts`) — `(events, range) => string | null`
+9. `Heatmap` component (renders a `DayCell[][]` grid for any range)
+10. `Minimap` component (one bar per year over event history; click selects calendar year)
+11. `SourceToggles` + `RangeSelector` components (pill row: Last 365 / 2026 / 2025 / …)
 12. `DayDrawer` component
 13. `RotatingFooter` component
-14. `Graph` root island + Astro page
+14. `Graph` root island + Astro page (default `selectedRange` = rolling 365 days)
 15. Ingest helpers (timezone + http)
 16. Persist (idempotent JSONL append)
 17. YouTube ingester
@@ -51,11 +66,13 @@ life-contribution-graph/
 │       │   ├── Heatmap.tsx
 │       │   ├── Minimap.tsx
 │       │   ├── SourceToggles.tsx
+│       │   ├── RangeSelector.tsx
 │       │   ├── DayDrawer.tsx
 │       │   └── RotatingFooter.tsx
 │       ├── lib/
 │       │   ├── schema.ts
 │       │   ├── blast.ts
+│       │   ├── range.ts
 │       │   ├── compute.ts
 │       │   ├── color.ts
 │       │   ├── facts.ts
@@ -77,6 +94,7 @@ life-contribution-graph/
 │   ├── schema.test.ts
 │   ├── load-events.test.ts
 │   ├── blast.test.ts
+│   ├── range.test.ts
 │   ├── compute.test.ts
 │   ├── color.test.ts
 │   ├── facts.test.ts
