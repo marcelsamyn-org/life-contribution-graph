@@ -1436,7 +1436,6 @@
 {"id":"code:marcelsamyn/assistant-memory:0d21a54e0fcc69c935f9b759220164c66fee7798","source":"code_commit","date":"2025-04-05","repo":"marcelsamyn/assistant-memory","message":"✨ feat: set up db and schema","url":"https://github.com/marcelsamyn/assistant-memory/commit/0d21a54e0fcc69c935f9b759220164c66fee7798"}
 {"id":"code:marcelsamyn/assistant-memory:9dd16f4a3d5ad63ba7c68173a22dd689b2548d54","source":"code_commit","date":"2025-04-02","repo":"marcelsamyn/assistant-memory","message":"✨ feat: mcp server on h3","url":"https://github.com/marcelsamyn/assistant-memory/commit/9dd16f4a3d5ad63ba7c68173a22dd689b2548d54"}
 {"id":"code:marcelsamyn/assistant-memory:ef54fa799ccb67dd60350240583e6ab5955f1519","source":"code_commit","date":"2025-04-02","repo":"marcelsamyn/assistant-memory","message":"🐣 init: hello nitro","url":"https://github.com/marcelsamyn/assistant-memory/commit/ef54fa799ccb67dd60350240583e6ab5955f1519"}
->>>>>>> 84f0f96 (✨ feat: redesign, fix book and stories)
 {"id":"book:1a8dba294a6b319bb0898cac05393dc378dc30a6","source":"book_commit","date":"2026-05-09","linesAdded":44,"message":"✏️ writing"}
 {"id":"book:5d14e37ebfe1fb66ded5cb75af4c46bba30dbbb8","source":"book_commit","date":"2026-05-06","linesAdded":16,"message":"✏️ writing"}
 {"id":"book:4360dc78e0ddf0930b81b1834f54cb371a403a5c","source":"book_commit","date":"2026-05-05","linesAdded":26,"message":"✏️ writing"}
@@ -1570,8 +1569,6 @@
 {"id":"gh:marcelsamyn/syntax-highlight","source":"gh_repo_created","date":"2014-01-27","name":"syntax-highlight","url":"https://github.com/marcelsamyn/syntax-highlight"}
 {"id":"gh:marcelsamyn/tjoektjoek","source":"gh_repo_created","date":"2013-10-26","name":"tjoektjoek","url":"https://github.com/marcelsamyn/tjoektjoek"}
 {"id":"gh:marcelsamyn-org/book","source":"gh_repo_created","date":"2025-10-25","name":"book","url":"https://github.com/marcelsamyn-org/book"}
-<<<<<<< HEAD
-=======
 {"id":"ig:story:18089972126210960","source":"ig_story","date":"2026-05-07","caption":"If ONE MORE PERSON asks for my nameâ¦\n Okay okay Iâm showing off.\n\nBUT ALSO let me share some inspiration.\n\n(Go read the post)"}
 {"id":"ig:story:18103519324962604","source":"ig_story","date":"2026-05-07","caption":""}
 {"id":"ig:story:18125097658541644","source":"ig_story","date":"2026-05-06","caption":"Also shipped a huge memory upgrade on Petals - View everything in your memory\n- New timeline view \n- It will self-correct mistakes\n- It dreams and self-cleans\n- Now tracks your commitments\n- Supports nicknames\n- Track your metrics too"}
@@ -3939,3 +3936,6 @@
 {"id":"ig:story:17890070707130654","source":"ig_story","date":"2017-12-11","caption":""}
 {"id":"ig:story:17912670199010649","source":"ig_story","date":"2017-12-11","caption":""}
 {"id":"ig:story:17882611390168488","source":"ig_story","date":"2017-12-11","caption":"Sneeuw vs. De Lijn 1-0"}
+{"id":"ig:18092946803228084","source":"ig_reel","date":"2026-05-09","durationSec":0,"url":"https://www.instagram.com/reel/DYHk7S9xIJs/"}
+{"id":"ig:story:18096923201030198","source":"ig_story","date":"2026-05-09","url":"https://www.instagram.com/stories/marcel.samyn/3893244649876352127"}
+{"id":"gh:marcelsamyn-org/life-contribution-graph","source":"gh_repo_created","date":"2026-05-09","name":"life-contribution-graph","url":"https://github.com/marcelsamyn-org/life-contribution-graph"}
