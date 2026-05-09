@@ -36,6 +36,7 @@ jobs:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_LONG_LIVED_TOKEN: ${{ secrets.IG_LONG_LIVED_TOKEN }}
           GH_INGEST_PAT: ${{ secrets.GH_INGEST_PAT }}
+          GH_AUTHOR_LOGIN: ${{ secrets.GH_AUTHOR_LOGIN }}
           LOCAL_TZ: Europe/Brussels
         run: bun run ingest
 

@@ -5,5 +5,6 @@
   { "id": "ig_post",         "label": "Instagram posts",    "group": "social",  "defaultEnabled": true,  "color": "oklch(0.72 0.14 290)" },
   { "id": "ig_story",        "label": "Instagram stories",  "group": "social",  "defaultEnabled": false, "color": "oklch(0.78 0.10 270)" },
   { "id": "book_commit",     "label": "Book",               "group": "writing", "defaultEnabled": true,  "color": "oklch(0.65 0.15 145)" },
+  { "id": "code_commit",     "label": "Code commits",       "group": "code",    "defaultEnabled": true,  "color": "oklch(0.65 0.14 240)" },
   { "id": "gh_repo_created", "label": "New repos",          "group": "code",    "defaultEnabled": true,  "color": "oklch(0.6 0.18 220)" }
 ]

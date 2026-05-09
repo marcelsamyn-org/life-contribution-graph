@@ -1,6 +1,7 @@
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Event } from '../../app/src/lib/schema';
+import { fetchCodeCommitEvents } from './code-commits';
 import { fetchGithubEvents } from './github';
 import { fetchInstagramEvents } from './instagram';
 import { appendNovelEvents } from './persist';
@@ -27,6 +28,7 @@ async function main(): Promise<void> {
     tryFetch('youtube', fetchYoutubeEvents),
     tryFetch('instagram', fetchInstagramEvents),
     tryFetch('github', fetchGithubEvents),
+    tryFetch('code', fetchCodeCommitEvents),
   ]);
 
   const allEvents = runs.flatMap((r) => r.events);

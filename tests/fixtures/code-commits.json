@@ -1,0 +1,29 @@
+[
+  {
+    "sha": "abc123def456789012345678901234567890aaaa",
+    "html_url": "https://github.com/marcelsamyn/example/commit/abc123def456789012345678901234567890aaaa",
+    "commit": {
+      "author": { "date": "2026-05-08T14:32:11Z" },
+      "message": "feat(api): add /heartbeat endpoint\n\nLonger body that should be stripped."
+    },
+    "author": { "login": "marcelsamyn" }
+  },
+  {
+    "sha": "fedcba9876543210fedcba9876543210bbbbbbbb",
+    "html_url": "https://github.com/marcelsamyn/example/commit/fedcba9876543210fedcba9876543210bbbbbbbb",
+    "commit": {
+      "author": { "date": "2026-05-07T20:00:00Z" },
+      "message": "fix: typo"
+    },
+    "author": { "login": "marcelsamyn" }
+  },
+  {
+    "sha": "0000000000000000000000000000000000000000",
+    "html_url": "https://github.com/marcelsamyn/example/commit/0000000000000000000000000000000000000000",
+    "commit": {
+      "author": null,
+      "message": "missing author date — should be skipped"
+    },
+    "author": { "login": "marcelsamyn" }
+  }
+]

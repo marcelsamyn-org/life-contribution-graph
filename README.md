@@ -1,6 +1,6 @@
 # life contribution graph
 
-A public, static visualization of Marcel Samyn's contributions over time — YouTube videos (long-form + shorts), Instagram posts / reels / stories, book commits, and new public repositories.
+A public, static visualization of Marcel Samyn's contributions over time — YouTube videos (long-form + shorts), Instagram posts / reels / stories, book commits, code commits to whitelisted repositories, and new public repositories.
 
 > The point isn't to encourage more output. The graph is a mirror, not a coach. Inspired by David Deida's framing of giving without expectation of outcome.
 
@@ -100,14 +100,16 @@ app/                       Astro site
 
 data/
 ├── events.jsonl           append-only log; the source of truth
-└── sources.json           identity (id, label, color, default-enabled)
+├── sources.json           identity (id, label, color, default-enabled)
+└── code-repos.json        whitelist of "owner/repo" strings to track for code commits
 
 scripts/ingest/            run via `bun run ingest`
 ├── run.ts                 orchestrator (per-source isolation)
 ├── persist.ts             idempotent JSONL append, dedupes by event.id
 ├── youtube.ts
 ├── instagram.ts
-├── github.ts
+├── github.ts              new public repos + book commits
+├── code-commits.ts        commits in data/code-repos.json (point 1 each)
 ├── refresh-ig-token.ts    standalone (weekly workflow)
 └── lib/
     ├── timezone.ts        toLocalDate via date-fns-tz
@@ -151,9 +153,21 @@ export YOUTUBE_API_KEY=…
 export YOUTUBE_CHANNEL_ID=…
 export IG_USER_ID=…
 export IG_LONG_LIVED_TOKEN=…
-export GH_INGEST_PAT=…   # optional; only needed for org/private repo access
+export GH_AUTHOR_LOGIN=…   # your GitHub login, used to filter commits in tracked repos
+export GH_INGEST_PAT=…     # optional; lifts the 60 req/h anonymous rate limit
 bun run ingest
 ```
+
+To track commits from specific repos, edit `data/code-repos.json`:
+
+```json
+[
+  "marcelsamyn/example",
+  "marcelsamyn-org/another"
+]
+```
+
+Each commit authored by `GH_AUTHOR_LOGIN` in any of those repos becomes one `code_commit` event with weight 1. Unlike `book_commit` (which scales with `linesAdded`), code commits are deliberately flat — the graph honors the act of showing up, not the diff size.
 
 Output is a one-line summary like `📊 +5 (youtube:2 instagram:3 github:0)`. The orchestrator exits non-zero **only if every source fails** — one source's outage doesn't block the others.
 
@@ -190,7 +204,8 @@ In the GitHub repo: **Settings → Secrets and variables → Actions → New rep
 | `YOUTUBE_CHANNEL_ID` | YouTube ingester | The `UC…` channel id (NOT the @handle) |
 | `IG_USER_ID` | Instagram ingester | Numeric Instagram Business/Creator account id |
 | `IG_LONG_LIVED_TOKEN` | Instagram ingester | 60-day token; auto-rotated weekly |
-| `GH_INGEST_PAT` | GitHub ingester | Optional; only if hitting org-private repos |
+| `GH_AUTHOR_LOGIN` | Code-commits ingester | Your GitHub login (e.g. `marcelsamyn`); used to filter commits |
+| `GH_INGEST_PAT` | GitHub + code ingesters | Optional; lifts anonymous rate limit, also needed for private-repo access |
 | `GH_PAT_FOR_SECRETS` | Token-refresh workflow | Fine-grained PAT, this repo only, Secrets RW |
 
 ### 4. Trigger the first ingest
@@ -245,20 +260,38 @@ The Instagram Graph API requires a **Business or Creator** account (not personal
 
 After initial setup, the `refresh-ig-token` workflow rotates the long-lived token weekly so it never expires.
 
-### GitHub — `GH_INGEST_PAT` (optional)
+### GitHub — `GH_AUTHOR_LOGIN` and `GH_INGEST_PAT`
 
-The book repo (`marcelsamyn-org/book`) and the user/org repo lists are read via `git clone` and the public REST API. **You don't need a PAT for public-only access.** Set this secret only if:
+`GH_AUTHOR_LOGIN` is just your GitHub login (e.g. `marcelsamyn`). The code-commits ingester uses it to filter commits in whitelisted repos.
 
-- You want to include private repos in the `gh_repo_created` count, or
-- You're hitting GitHub's anonymous rate limit (60 req/h) — authenticated calls get 5 000 req/h.
+`GH_INGEST_PAT` is **optional** but recommended if you track more than a couple of repos:
 
-To create one:
+- Anonymous GitHub API calls are rate-limited to 60 req/h — easy to blow through with a few repos × 100 commits/page.
+- Authenticated calls get 5 000 req/h.
+- Required if you want to track commits in a private repo, or include private repos in the `gh_repo_created` count.
+
+To create the PAT:
 
 1. <https://github.com/settings/personal-access-tokens/new> → **Fine-grained token**.
 2. **Resource owner:** your account (or the org).
 3. **Repository access:** *Public repositories (read-only)* is enough; pick *Selected repositories* if you want private inclusion.
 4. **Permissions → Repository → Metadata: Read-only**, **Contents: Read-only**.
 5. Generate, copy.
+
+### Tracking code commits in specific repos
+
+Edit `data/code-repos.json` and add a string per repo:
+
+```json
+[
+  "marcelsamyn/some-project",
+  "marcelsamyn-org/another"
+]
+```
+
+The ingester will fetch commits authored by `GH_AUTHOR_LOGIN` from each, dedupe by SHA, and append them as `code_commit` events. Re-running is idempotent (the SHA is in the event id). The default scoring is `point(1)` — one commit, one quiet day-mark, regardless of size.
+
+If you want to retune (e.g., cap at one credit per day per repo, or weight by repo), edit `blastBySource.code_commit` in `app/src/lib/blast.ts`.
 
 ### `GH_PAT_FOR_SECRETS` — for the IG token refresh
 

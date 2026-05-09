@@ -7,6 +7,7 @@ const KEY_ORDER = [
   'date',
   'durationSec',
   'linesAdded',
+  'repo',
   'name',
   'title',
   'caption',

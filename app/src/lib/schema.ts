@@ -7,6 +7,7 @@ export const SourceId = z.enum([
   'ig_post',
   'ig_story',
   'book_commit',
+  'code_commit',
   'gh_repo_created',
 ]);
 export type SourceId = z.infer<typeof SourceId>;
@@ -38,6 +39,15 @@ const CommitEvent = z.object({
   message: z.string().optional(),
 });
 
+const CodeCommitEvent = z.object({
+  id: z.string().min(1),
+  source: z.literal('code_commit'),
+  date: DateString,
+  repo: z.string().min(1),
+  message: z.string().optional(),
+  url: z.string().url().optional(),
+});
+
 const RepoEvent = z.object({
   id: z.string().min(1),
   source: z.literal('gh_repo_created'),
@@ -50,6 +60,7 @@ export const Event = z.discriminatedUnion('source', [
   VideoEvent,
   PostEvent,
   CommitEvent,
+  CodeCommitEvent,
   RepoEvent,
 ]);
 export type Event = z.infer<typeof Event>;

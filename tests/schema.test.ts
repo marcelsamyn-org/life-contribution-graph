@@ -80,6 +80,21 @@ describe('Event schema', () => {
     expect(parsed.source).toBe('gh_repo_created');
   });
 
+  test('parses a code_commit event', () => {
+    const parsed = Event.parse({
+      id: 'code:foo/bar:abc123',
+      source: 'code_commit',
+      date: '2026-05-08',
+      repo: 'foo/bar',
+      message: 'fix: typo',
+      url: 'https://github.com/foo/bar/commit/abc123',
+    });
+    expect(parsed.source).toBe('code_commit');
+    if (parsed.source === 'code_commit') {
+      expect(parsed.repo).toBe('foo/bar');
+    }
+  });
+
   test('rejects unknown source', () => {
     expect(() =>
       Event.parse({ id: 'x', source: 'unknown', date: '2026-05-08' })

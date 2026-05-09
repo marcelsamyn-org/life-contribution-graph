@@ -20,6 +20,8 @@ function eventLabel(e: Event): string {
       return 'Instagram story';
     case 'book_commit':
       return `Book commit — ${e.linesAdded} lines${e.message ? ` (${e.message.slice(0, 60)})` : ''}`;
+    case 'code_commit':
+      return `${e.repo}${e.message ? ` — ${e.message.slice(0, 80)}` : ''}`;
     case 'gh_repo_created':
       return `New repo — ${e.name}`;
   }

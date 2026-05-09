@@ -63,5 +63,6 @@ export const blastBySource: Record<SourceId, BlastFn> = {
   ig_post: point(1),
   ig_story: point(0.3),
   book_commit: linesCapped({ perLine: 1, cap: 200 }),
+  code_commit: point(1),
   gh_repo_created: point(5),
 };
