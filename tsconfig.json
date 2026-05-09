@@ -16,6 +16,7 @@
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "types": ["bun", "astro/client"],
+    "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
       "@app/*": ["app/src/*"],
