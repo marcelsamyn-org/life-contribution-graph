@@ -1,0 +1,15 @@
+commit e7a91f2c0d6b4e8f1234567890abcdef12345678
+Author: Marcel Samyn <marcel@samyn.co>
+Date:   2026-05-08T14:32:11+02:00
+
+    chapter 3 draft
+
+ 3 files changed, 312 insertions(+), 18 deletions(-)
+
+commit 1234567890abcdef1234567890abcdef12345678
+Author: Marcel Samyn <marcel@samyn.co>
+Date:   2026-05-07T19:00:00+02:00
+
+    fix typos
+
+ 1 file changed, 5 insertions(+), 2 deletions(-)
