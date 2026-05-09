@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "snippet": {
+        "resourceId": { "videoId": "vid_long" },
+        "publishedAt": "2026-05-08T12:00:00Z",
+        "title": "On giving"
+      }
+    },
+    {
+      "snippet": {
+        "resourceId": { "videoId": "vid_short" },
+        "publishedAt": "2026-05-09T12:00:00Z",
+        "title": "30s on Deida"
+      }
+    }
+  ],
+  "nextPageToken": null
+}

@@ -1,0 +1,6 @@
+{
+  "items": [
+    { "id": "vid_long",  "contentDetails": { "duration": "PT23M" } },
+    { "id": "vid_short", "contentDetails": { "duration": "PT47S" } }
+  ]
+}
