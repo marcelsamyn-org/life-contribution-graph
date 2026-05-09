@@ -1,5 +1,22 @@
 ---
+import { readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { Graph } from '../components/Graph';
+import { parseEventsJsonl } from '../lib/load-events';
+import { Source } from '../lib/schema';
 import '../styles/global.css';
+
+const eventsPath = resolve(import.meta.dirname, '../../../data/events.jsonl');
+const sourcesPath = resolve(import.meta.dirname, '../../../data/sources.json');
+
+let eventsText = '';
+try {
+  eventsText = await readFile(eventsPath, 'utf-8');
+} catch (err) {
+  if ((err as NodeJS.ErrnoException).code !== 'ENOENT') throw err;
+}
+const events = parseEventsJsonl(eventsText);
+const sources = Source.array().parse(JSON.parse(await readFile(sourcesPath, 'utf-8')));
 ---
 <html lang="en">
   <head>
@@ -7,7 +24,7 @@ import '../styles/global.css';
     <meta name="viewport" content="width=device-width" />
     <title>Marcel Samyn — life contribution graph</title>
   </head>
-  <body class="min-h-screen flex items-center justify-center">
-    <p class="text-sm opacity-60">scaffolding ok</p>
+  <body class="min-h-screen">
+    <Graph events={events} sources={sources} client:load />
   </body>
 </html>
