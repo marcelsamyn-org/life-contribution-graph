@@ -50,13 +50,13 @@ export function storiesToEvents(items: Story[]): Event[] {
 async function fetchAllMedia(userId: string, token: string): Promise<Media[]> {
   type Resp = { data: Media[]; paging?: { next?: string } };
   const fields = 'id,media_type,media_product_type,timestamp,permalink,caption';
-  let url: string | undefined =
+  let next: string | undefined =
     `https://graph.instagram.com/v22.0/${userId}/media?fields=${fields}&access_token=${token}`;
   const out: Media[] = [];
-  while (url) {
-    const data = await fetchJson<Resp>(url);
-    out.push(...data.data);
-    url = data.paging?.next ?? undefined;
+  while (next) {
+    const resp: Resp = await fetchJson<Resp>(next);
+    out.push(...resp.data);
+    next = resp.paging?.next ?? undefined;
   }
   return out;
 }
