@@ -1,0 +1,9 @@
+[
+  { "id": "youtube_long",    "label": "YouTube long-form",  "group": "video",   "defaultEnabled": true,  "color": "oklch(0.7 0.18 25)" },
+  { "id": "youtube_short",   "label": "YouTube shorts",     "group": "video",   "defaultEnabled": true,  "color": "oklch(0.78 0.16 50)" },
+  { "id": "ig_reel",         "label": "Instagram reels",    "group": "social",  "defaultEnabled": true,  "color": "oklch(0.7 0.16 320)" },
+  { "id": "ig_post",         "label": "Instagram posts",    "group": "social",  "defaultEnabled": true,  "color": "oklch(0.72 0.14 290)" },
+  { "id": "ig_story",        "label": "Instagram stories",  "group": "social",  "defaultEnabled": false, "color": "oklch(0.78 0.10 270)" },
+  { "id": "book_commit",     "label": "Book",               "group": "writing", "defaultEnabled": true,  "color": "oklch(0.65 0.15 145)" },
+  { "id": "gh_repo_created", "label": "New repos",          "group": "code",    "defaultEnabled": true,  "color": "oklch(0.6 0.18 220)" }
+]
