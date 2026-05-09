@@ -1,0 +1,9 @@
+node_modules/
+app/dist/
+.astro/
+.netlify/
+.cursor/
+.env
+.env.local
+*.log
+.DS_Store

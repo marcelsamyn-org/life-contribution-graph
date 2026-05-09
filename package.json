@@ -1,0 +1,36 @@
+{
+  "name": "life-contribution-graph",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev --root app",
+    "build": "astro build --root app",
+    "preview": "astro preview --root app",
+    "check": "astro check --root app && tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "test": "bun test",
+    "ingest": "bun run scripts/ingest/run.ts"
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "@astrojs/react": "^4.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/vite": "^4.0.0",
+    "zod": "^4.0.0",
+    "culori": "^4.0.0",
+    "date-fns": "^4.0.0",
+    "date-fns-tz": "^3.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@types/bun": "latest",
+    "@types/culori": "^2.1.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.6.0"
+  }
+}

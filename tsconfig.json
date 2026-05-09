@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": false,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "types": ["bun", "astro/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["app/src/*"],
+      "@data/*": ["data/*"],
+      "@scripts/*": ["scripts/*"]
+    }
+  },
+  "include": ["app/src/**/*", "scripts/**/*", "tests/**/*"]
+}
