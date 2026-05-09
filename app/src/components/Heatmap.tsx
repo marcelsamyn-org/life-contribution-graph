@@ -28,17 +28,21 @@ export function Heatmap({ grid, onHover, onClick, selectedDate }: Props) {
               return <div key={d} className="w-3 h-3" aria-hidden="true" />;
             }
             const bucket = bucketFor(cell.intensity, cuts);
-            const color = cell.intensity > 0 ? bucketColor(bucket) : 'oklch(0.96 0 0)';
+            const color =
+              cell.intensity > 0 ? bucketColor(bucket) : 'var(--paper-inset)';
             const isSelected = selectedDate === cell.date;
             return (
               <button
                 type="button"
                 key={d}
                 aria-label={`${cell.date}, intensity ${cell.intensity.toFixed(2)}`}
-                className={`w-3 h-3 rounded-[2px] transition-shadow ${
-                  isSelected ? 'ring-2 ring-offset-1 ring-stone-700' : ''
-                }`}
-                style={{ background: color }}
+                className="w-3 h-3 rounded-[2px] transition-shadow"
+                style={{
+                  background: color,
+                  boxShadow: isSelected
+                    ? '0 0 0 1px var(--paper), 0 0 0 3px var(--primary)'
+                    : undefined,
+                }}
                 onMouseEnter={() => onHover(cell)}
                 onFocus={() => onHover(cell)}
                 onClick={() => onClick(cell)}

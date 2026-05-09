@@ -31,11 +31,14 @@ export function RangeSelector({ events, today, selected, onSelect }: Props) {
             onClick={() => onSelect(r)}
             role="tab"
             aria-selected={active}
-            className={`text-xs px-2.5 py-1 rounded-full border transition-colors ${
-              active
-                ? 'border-stone-700 bg-stone-900 text-white'
-                : 'border-stone-200 bg-white text-stone-600 hover:text-stone-900'
-            }`}
+            className="text-xs px-2.5 py-1 rounded-full border transition-colors"
+            style={{
+              fontFamily: 'var(--font-mono)',
+              letterSpacing: '0.04em',
+              borderColor: active ? 'var(--primary)' : 'var(--rule)',
+              background: active ? 'var(--primary)' : 'transparent',
+              color: active ? 'white' : 'var(--ink-secondary)',
+            }}
           >
             {r.label}
           </button>

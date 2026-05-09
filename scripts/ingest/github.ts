@@ -50,7 +50,9 @@ async function fetchBookCommits(): Promise<Event[]> {
   const author = process.env.GH_BOOK_AUTHOR ?? 'Marcel Samyn';
   const dir = await mkdtemp(join(tmpdir(), 'lcg-book-'));
   try {
-    await exec('git', ['clone', '--filter=blob:none', '--no-checkout', repoUrl, dir]);
+    // `--bare` clones the full object DB without a working tree. Avoids partial-clone
+    // promisor fetches, which break `git log --shortstat` (needs blobs to compute diffs).
+    await exec('git', ['clone', '--bare', repoUrl, dir]);
     const { stdout } = await exec(
       'git',
       ['-C', dir, 'log', '--shortstat', '--date=iso-strict', `--author=${author}`, '--all'],

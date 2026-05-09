@@ -18,16 +18,17 @@ export function SourceToggles({ sources, enabled, onToggle, onReset }: Props) {
             key={s.id}
             onClick={() => onToggle(s.id)}
             aria-pressed={on}
-            className={`text-xs px-2 py-1 rounded-full border transition-colors ${
-              on
-                ? 'border-stone-300 bg-white text-stone-900'
-                : 'border-stone-200 bg-stone-50 text-stone-400'
-            }`}
+            className="text-xs px-2 py-1 rounded-full border transition-colors"
+            style={{
+              borderColor: on ? 'var(--rule)' : 'var(--rule-soft)',
+              background: on ? 'white' : 'transparent',
+              color: on ? 'var(--ink)' : 'var(--ink-faint)',
+            }}
           >
             <span
               aria-hidden="true"
               className="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
-              style={{ background: on ? s.color : 'oklch(0.85 0 0)' }}
+              style={{ background: on ? s.color : 'var(--rule)' }}
             />
             {s.label}
           </button>
@@ -36,9 +37,16 @@ export function SourceToggles({ sources, enabled, onToggle, onReset }: Props) {
       <button
         type="button"
         onClick={onReset}
-        className="text-xs px-2 py-1 rounded-full text-stone-500 hover:text-stone-700"
+        className="px-2 py-1 transition-colors"
+        style={{
+          fontFamily: 'var(--font-mono)',
+          fontSize: '0.6875rem',
+          letterSpacing: 'var(--tracking-wider)',
+          textTransform: 'uppercase',
+          color: 'var(--ink-muted)',
+        }}
       >
-        reset
+        Reset
       </button>
     </div>
   );

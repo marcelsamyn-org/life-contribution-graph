@@ -24,7 +24,10 @@ const sources = Source.array().parse(JSON.parse(await readFile(sourcesPath, 'utf
     <meta name="viewport" content="width=device-width" />
     <title>Marcel Samyn — life contribution graph</title>
   </head>
-  <body class="min-h-screen">
-    <Graph events={events} sources={sources} client:load />
+  <body class="min-h-screen relative">
+    <div class="kalon-paper-grain" aria-hidden="true"></div>
+    <div class="relative z-10">
+      <Graph events={events} sources={sources} client:load />
+    </div>
   </body>
 </html>

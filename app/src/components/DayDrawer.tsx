@@ -38,31 +38,74 @@ export function DayDrawer({ date, events, onClose }: Props) {
 
   return (
     <aside
-      className="fixed top-0 right-0 h-screen w-full max-w-sm bg-white border-l border-stone-200 shadow-xl p-6 overflow-y-auto"
+      className="fixed top-0 right-0 h-screen w-full max-w-sm p-6 overflow-y-auto"
+      style={{
+        background: 'var(--paper)',
+        borderLeft: '1px solid var(--rule)',
+        boxShadow:
+          '0 4px 16px -4px rgba(28,25,23,0.12), 0 24px 48px -16px rgba(28,25,23,0.16)',
+        zIndex: 20,
+      }}
       aria-label={`events on ${date}`}
     >
-      <div className="flex items-center justify-between mb-4">
-        <h2 className="text-sm font-medium tabular-nums">{date}</h2>
+      <div className="flex items-baseline justify-between mb-5">
+        <h2
+          style={{
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.6875rem',
+            fontWeight: 500,
+            letterSpacing: 'var(--tracking-wider)',
+            textTransform: 'uppercase',
+            color: 'var(--accent)',
+          }}
+        >
+          {date}
+        </h2>
         <button
           type="button"
           onClick={onClose}
           aria-label="close"
-          className="text-stone-500 hover:text-stone-900"
+          className="text-lg leading-none transition-colors"
+          style={{ color: 'var(--ink-muted)' }}
+          onMouseEnter={(ev) => {
+            ev.currentTarget.style.color = 'var(--accent)';
+          }}
+          onMouseLeave={(ev) => {
+            ev.currentTarget.style.color = 'var(--ink-muted)';
+          }}
         >
           ×
         </button>
       </div>
       {dayEvents.length === 0 ? (
-        <p className="text-sm text-stone-400">no gifts this day</p>
+        <p
+          style={{
+            fontFamily: 'var(--font-serif)',
+            fontStyle: 'italic',
+            fontSize: '0.95rem',
+            color: 'var(--ink-muted)',
+          }}
+        >
+          no gifts this day
+        </p>
       ) : (
         <ul className="space-y-3">
           {dayEvents.map((e) => {
             const url = eventUrl(e);
             const label = eventLabel(e);
             return (
-              <li key={e.id} className="text-sm">
+              <li
+                key={e.id}
+                className="text-sm"
+                style={{ color: 'var(--ink)', lineHeight: 1.55 }}
+              >
                 {url ? (
-                  <a href={url} target="_blank" rel="noreferrer" className="underline decoration-stone-300 hover:decoration-stone-700">
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="kalon-link"
+                  >
                     {label}
                   </a>
                 ) : (

@@ -45,7 +45,13 @@ export function RotatingFooter({ events, range }: Props) {
 
   return (
     <p
-      className="text-sm text-stone-500 tabular-nums tracking-tight mt-6 min-h-5"
+      className="text-sm mt-8 min-h-5"
+      style={{
+        fontFamily: 'var(--font-mono)',
+        fontVariantNumeric: 'tabular-nums',
+        letterSpacing: '0.01em',
+        color: 'var(--ink-muted)',
+      }}
       aria-live="polite"
     >
       {[...current].map((ch, idx) => (
