@@ -1,0 +1,49 @@
+name: ingest
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install deps
+        run: bun install --frozen-lockfile
+
+      - name: Run ingest
+        id: ingest
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          YOUTUBE_CHANNEL_ID: ${{ secrets.YOUTUBE_CHANNEL_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_LONG_LIVED_TOKEN: ${{ secrets.IG_LONG_LIVED_TOKEN }}
+          GH_INGEST_PAT: ${{ secrets.GH_INGEST_PAT }}
+          LOCAL_TZ: Europe/Brussels
+        run: bun run ingest
+
+      - name: Commit changes
+        if: steps.ingest.outputs.appended != '0' && steps.ingest.outputs.appended != ''
+        run: |
+          git config user.name 'lcg-ingest[bot]'
+          git config user.email 'lcg-ingest@users.noreply.github.com'
+          git add data/events.jsonl
+          git diff --cached --quiet || git commit -m "${{ steps.ingest.outputs.summary }}"
+          git push
