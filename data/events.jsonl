@@ -3955,3 +3955,7 @@
 {"id":"yt:n0FSZPxhUYg","source":"youtube_short","date":"2026-05-11","durationSec":54,"title":"AI says you're right, but not correct","url":"https://www.youtube.com/watch?v=n0FSZPxhUYg"}
 {"id":"ig:18101205263515138","source":"ig_reel","date":"2026-05-11","durationSec":0,"url":"https://www.instagram.com/reel/DYNOiCDxmuF/"}
 {"id":"ig:story:18099823109017269","source":"ig_story","date":"2026-05-11","url":"https://www.instagram.com/stories/marcel.samyn/3894836235328417531"}
+{"id":"book:a7f1925d2df0cadd4df01bac5dcfa7ce4e11fe56","source":"book_commit","date":"2026-05-12","linesAdded":4,"message":"✏️ writing"}
+{"id":"book:ed99c2cd3397eddb03dafa73cb8057a0bcbc2646","source":"book_commit","date":"2026-05-12","linesAdded":13,"message":"✏️ writing"}
+{"id":"code:marcelsamyn-org/book:a7f1925d2df0cadd4df01bac5dcfa7ce4e11fe56","source":"code_commit","date":"2026-05-12","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/a7f1925d2df0cadd4df01bac5dcfa7ce4e11fe56"}
+{"id":"code:marcelsamyn-org/book:ed99c2cd3397eddb03dafa73cb8057a0bcbc2646","source":"code_commit","date":"2026-05-12","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/ed99c2cd3397eddb03dafa73cb8057a0bcbc2646"}
