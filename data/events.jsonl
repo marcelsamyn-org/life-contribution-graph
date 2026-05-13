@@ -3965,3 +3965,4 @@
 {"id":"ig:story:17883765240558847","source":"ig_story","date":"2026-05-12","url":"https://www.instagram.com/stories/marcel.samyn/3895461178546166862"}
 {"id":"book:cbf44f14a8fcbb7f47cb3c27227cab4a35af558f","source":"book_commit","date":"2026-05-13","linesAdded":10,"message":"✏️ writing"}
 {"id":"code:marcelsamyn-org/book:cbf44f14a8fcbb7f47cb3c27227cab4a35af558f","source":"code_commit","date":"2026-05-13","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/cbf44f14a8fcbb7f47cb3c27227cab4a35af558f"}
+{"id":"code:marcelsamyn/assistant-memory:622300c3adabd66b040d85f7f60699d204d8b5f9","source":"code_commit","date":"2026-05-13","repo":"marcelsamyn/assistant-memory","message":"1.10.0","url":"https://github.com/marcelsamyn/assistant-memory/commit/622300c3adabd66b040d85f7f60699d204d8b5f9"}
