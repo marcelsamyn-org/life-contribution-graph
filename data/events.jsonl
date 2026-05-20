@@ -4001,3 +4001,6 @@
 {"id":"ig:story:18091044026262626","source":"ig_story","date":"2026-05-19","url":"https://www.instagram.com/stories/marcel.samyn/3900438344458745665"}
 {"id":"ig:story:18374433043201572","source":"ig_story","date":"2026-05-19","url":"https://www.instagram.com/stories/marcel.samyn/3900437624481357872"}
 {"id":"yt:3i65MhsSG-Q","source":"youtube_short","date":"2026-05-19","durationSec":58,"title":"Claude designed my PCB. It worked.","url":"https://www.youtube.com/watch?v=3i65MhsSG-Q"}
+{"id":"ig:story:17970869334055926","source":"ig_story","date":"2026-05-20","url":"https://www.instagram.com/stories/marcel.samyn/3901063616347081816"}
+{"id":"book:d0c4d1c99c54c138da1ea0d68b71f8fc0dc4aa9b","source":"book_commit","date":"2026-05-20","linesAdded":18,"message":"✏️ writing"}
+{"id":"code:marcelsamyn-org/book:d0c4d1c99c54c138da1ea0d68b71f8fc0dc4aa9b","source":"code_commit","date":"2026-05-20","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/d0c4d1c99c54c138da1ea0d68b71f8fc0dc4aa9b"}
