@@ -4062,3 +4062,5 @@
 {"id":"code:marcelsamyn-org/petals:a4307fba7f059fe40c481cb27ebfd2eccf103e4b","source":"code_commit","date":"2026-05-24","repo":"marcelsamyn-org/petals","message":"🎨 style(theme): align paper background with Kalon near-white","url":"https://github.com/marcelsamyn-org/petals/commit/a4307fba7f059fe40c481cb27ebfd2eccf103e4b"}
 {"id":"ig:story:17941875741232289","source":"ig_story","date":"2026-05-24","url":"https://www.instagram.com/stories/marcel.samyn/3903991864864688602"}
 {"id":"ig:story:18116551810780291","source":"ig_story","date":"2026-05-24","url":"https://www.instagram.com/stories/marcel.samyn/3904176793254653813"}
+{"id":"book:03f77ea1077abe1088d557a57d92a1509a40da49","source":"book_commit","date":"2026-05-25","linesAdded":17,"message":"✏️ writing"}
+{"id":"code:marcelsamyn-org/book:03f77ea1077abe1088d557a57d92a1509a40da49","source":"code_commit","date":"2026-05-25","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/03f77ea1077abe1088d557a57d92a1509a40da49"}
