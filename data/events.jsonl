@@ -4631,3 +4631,4 @@
 {"id":"ig:story:18129153628536028","source":"ig_story","date":"2026-06-21","url":"https://www.instagram.com/stories/marcel.samyn/3924646493525474277"}
 {"id":"book:f36b487b4e34b16279707325cc6741c987243989","source":"book_commit","date":"2026-06-22","linesAdded":8,"message":"✏️ writing"}
 {"id":"code:marcelsamyn-org/book:f36b487b4e34b16279707325cc6741c987243989","source":"code_commit","date":"2026-06-22","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/f36b487b4e34b16279707325cc6741c987243989"}
+{"id":"code:marcelsamyn-org/petals:d64ff34cd8480d9b65ec45dd8c05b203e1dbbcd1","source":"code_commit","date":"2026-06-22","repo":"marcelsamyn-org/petals","message":"🎨 style(ui): polish chat + tasks interaction details (#357)","url":"https://github.com/marcelsamyn-org/petals/commit/d64ff34cd8480d9b65ec45dd8c05b203e1dbbcd1"}
