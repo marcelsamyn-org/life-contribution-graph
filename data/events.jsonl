@@ -4761,3 +4761,6 @@
 {"id":"ig:17984532846028779","source":"ig_reel","date":"2026-08-11","durationSec":0,"url":"https://www.instagram.com/reel/Db5oM_OxW6M/"}
 {"id":"ig:story:18119177318487445","source":"ig_story","date":"2026-08-11","url":"https://www.instagram.com/stories/marcel.samyn/3961377716096295805"}
 {"id":"code:marcelsamyn-org/petals:ce6e82a5dff46d07f4fc010195d49f7227ebed3d","source":"code_commit","date":"2026-08-11","repo":"marcelsamyn-org/petals","message":"✨ feat(api): run create-chat's turn in the background","url":"https://github.com/marcelsamyn-org/petals/commit/ce6e82a5dff46d07f4fc010195d49f7227ebed3d"}
+{"id":"ig:story:18092591471641753","source":"ig_story","date":"2026-08-12","url":"https://www.instagram.com/stories/marcel.samyn/3961973685095617476"}
+{"id":"ig:story:18099472346209875","source":"ig_story","date":"2026-08-12","url":"https://www.instagram.com/stories/marcel.samyn/3961972581683292951"}
+{"id":"code:marcelsamyn-org/petals:4fd75d4ebf55bb7c0bdb5922f4710c89a5bc9618","source":"code_commit","date":"2026-08-12","repo":"marcelsamyn-org/petals","message":"🐛 fix(chat): record background reply failures","url":"https://github.com/marcelsamyn-org/petals/commit/4fd75d4ebf55bb7c0bdb5922f4710c89a5bc9618"}
