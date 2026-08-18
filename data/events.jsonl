@@ -4776,3 +4776,6 @@
 {"id":"ig:story:17948840073251403","source":"ig_story","date":"2026-08-17","url":"https://www.instagram.com/stories/marcel.samyn/3965899272352820708"}
 {"id":"book:4191add084a2e02a83780dcb20cc064fea634f4c","source":"book_commit","date":"2026-08-18","linesAdded":81,"message":"✏️ writing"}
 {"id":"code:marcelsamyn-org/book:4191add084a2e02a83780dcb20cc064fea634f4c","source":"code_commit","date":"2026-08-18","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/4191add084a2e02a83780dcb20cc064fea634f4c"}
+{"id":"ig:story:17878983039620196","source":"ig_story","date":"2026-08-18","url":"https://www.instagram.com/stories/marcel.samyn/3966485334191249407"}
+{"id":"book:98c57045fd0c7fefc2d756cef26a3382a9173c43","source":"book_commit","date":"2026-08-18","linesAdded":7,"message":"✏️ writing: more intro"}
+{"id":"code:marcelsamyn-org/book:98c57045fd0c7fefc2d756cef26a3382a9173c43","source":"code_commit","date":"2026-08-18","repo":"marcelsamyn-org/book","message":"✏️ writing: more intro","url":"https://github.com/marcelsamyn-org/book/commit/98c57045fd0c7fefc2d756cef26a3382a9173c43"}
