@@ -4774,3 +4774,5 @@
 {"id":"ig:story:17968187991128946","source":"ig_story","date":"2026-08-17","url":"https://www.instagram.com/stories/marcel.samyn/3965571845999100132"}
 {"id":"ig:story:18133911949619846","source":"ig_story","date":"2026-08-17","url":"https://www.instagram.com/stories/marcel.samyn/3965716295340821112"}
 {"id":"ig:story:17948840073251403","source":"ig_story","date":"2026-08-17","url":"https://www.instagram.com/stories/marcel.samyn/3965899272352820708"}
+{"id":"book:4191add084a2e02a83780dcb20cc064fea634f4c","source":"book_commit","date":"2026-08-18","linesAdded":81,"message":"✏️ writing"}
+{"id":"code:marcelsamyn-org/book:4191add084a2e02a83780dcb20cc064fea634f4c","source":"code_commit","date":"2026-08-18","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/4191add084a2e02a83780dcb20cc064fea634f4c"}
