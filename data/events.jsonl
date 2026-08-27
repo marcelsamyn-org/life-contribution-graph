@@ -4855,3 +4855,5 @@
 {"id":"code:marcelsamyn-org/book:d06e959c9e258a1fb468d6e8e22e5874f00cc425","source":"code_commit","date":"2026-08-26","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/d06e959c9e258a1fb468d6e8e22e5874f00cc425"}
 {"id":"ig:story:18115853405298178","source":"ig_story","date":"2026-08-26","url":"https://www.instagram.com/stories/marcel.samyn/3972282308615051419"}
 {"id":"ig:story:18485410543096409","source":"ig_story","date":"2026-08-26","url":"https://www.instagram.com/stories/marcel.samyn/3972282001922717914"}
+{"id":"ig:story:18130085551659466","source":"ig_story","date":"2026-08-27","url":"https://www.instagram.com/stories/marcel.samyn/3973011871875798779"}
+{"id":"code:marcelsamyn-org/petals:4e44ed7eb7ab4da50a50d4161ead512d301b2ed6","source":"code_commit","date":"2026-08-26","repo":"marcelsamyn-org/petals","message":"🐛 fix(automations): remove legacy one-time jobs on sync","url":"https://github.com/marcelsamyn-org/petals/commit/4e44ed7eb7ab4da50a50d4161ead512d301b2ed6"}
