@@ -4857,3 +4857,10 @@
 {"id":"ig:story:18485410543096409","source":"ig_story","date":"2026-08-26","url":"https://www.instagram.com/stories/marcel.samyn/3972282001922717914"}
 {"id":"ig:story:18130085551659466","source":"ig_story","date":"2026-08-27","url":"https://www.instagram.com/stories/marcel.samyn/3973011871875798779"}
 {"id":"code:marcelsamyn-org/petals:4e44ed7eb7ab4da50a50d4161ead512d301b2ed6","source":"code_commit","date":"2026-08-26","repo":"marcelsamyn-org/petals","message":"🐛 fix(automations): remove legacy one-time jobs on sync","url":"https://github.com/marcelsamyn-org/petals/commit/4e44ed7eb7ab4da50a50d4161ead512d301b2ed6"}
+{"id":"yt:H4q5ylFV6zY","source":"youtube_short","date":"2026-08-28","durationSec":56,"title":"Overkill reading light","url":"https://www.youtube.com/watch?v=H4q5ylFV6zY"}
+{"id":"ig:18128299957707989","source":"ig_reel","date":"2026-08-28","durationSec":0,"url":"https://www.instagram.com/reel/Dcl6AXLxLdr/"}
+{"id":"ig:story:17943643047302012","source":"ig_story","date":"2026-08-28","url":"https://www.instagram.com/stories/marcel.samyn/3973837897191201929"}
+{"id":"book:f794181cbc42fb10f0796cf0bfbc1ca825de6507","source":"book_commit","date":"2026-08-28","linesAdded":4,"message":"✏️ writingL aligned allies conclusion"}
+{"id":"book:9fe8d2512ec5180f5fe2765e430f9bd9cef8037c","source":"book_commit","date":"2026-08-28","linesAdded":23,"message":"✏️ writing: designing aligned allies cleanup"}
+{"id":"code:marcelsamyn-org/book:f794181cbc42fb10f0796cf0bfbc1ca825de6507","source":"code_commit","date":"2026-08-28","repo":"marcelsamyn-org/book","message":"✏️ writingL aligned allies conclusion","url":"https://github.com/marcelsamyn-org/book/commit/f794181cbc42fb10f0796cf0bfbc1ca825de6507"}
+{"id":"code:marcelsamyn-org/book:9fe8d2512ec5180f5fe2765e430f9bd9cef8037c","source":"code_commit","date":"2026-08-28","repo":"marcelsamyn-org/book","message":"✏️ writing: designing aligned allies cleanup","url":"https://github.com/marcelsamyn-org/book/commit/9fe8d2512ec5180f5fe2765e430f9bd9cef8037c"}
