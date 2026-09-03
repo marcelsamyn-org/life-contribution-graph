@@ -4881,3 +4881,5 @@
 {"id":"ig:story:18092512580555399","source":"ig_story","date":"2026-09-01","url":"https://www.instagram.com/stories/marcel.samyn/3976555048373159748"}
 {"id":"ig:story:17927666253404394","source":"ig_story","date":"2026-09-02","url":"https://www.instagram.com/stories/marcel.samyn/3977460616315105739"}
 {"id":"ig:story:18111924440108532","source":"ig_story","date":"2026-09-02","url":"https://www.instagram.com/stories/marcel.samyn/3977455209281992591"}
+{"id":"book:70ed464cefe6523a84acc89bc5a8609f7a3b334b","source":"book_commit","date":"2026-09-03","linesAdded":107,"message":"✏️ writing: captured by consumption rewrite"}
+{"id":"code:marcelsamyn-org/book:70ed464cefe6523a84acc89bc5a8609f7a3b334b","source":"code_commit","date":"2026-09-03","repo":"marcelsamyn-org/book","message":"✏️ writing: captured by consumption rewrite","url":"https://github.com/marcelsamyn-org/book/commit/70ed464cefe6523a84acc89bc5a8609f7a3b334b"}
