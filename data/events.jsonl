@@ -4888,3 +4888,7 @@
 {"id":"ig:story:18189966376401764","source":"ig_story","date":"2026-09-05","url":"https://www.instagram.com/stories/marcel.samyn/3979639898818808496"}
 {"id":"ig:story:18092876477130648","source":"ig_story","date":"2026-09-06","url":"https://www.instagram.com/stories/marcel.samyn/3980113619702592216"}
 {"id":"ig:story:18112965604807195","source":"ig_story","date":"2026-09-06","url":"https://www.instagram.com/stories/marcel.samyn/3980240875313779088"}
+{"id":"book:e5ee71ab434c366bce623c440cfe84a36080afd5","source":"book_commit","date":"2026-09-07","linesAdded":16,"message":"✏️ writing"}
+{"id":"book:b8c6be102363801c86eb2f74b042336023dc2a82","source":"book_commit","date":"2026-09-06","linesAdded":14,"message":"✏️ writing"}
+{"id":"code:marcelsamyn-org/book:e5ee71ab434c366bce623c440cfe84a36080afd5","source":"code_commit","date":"2026-09-07","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/e5ee71ab434c366bce623c440cfe84a36080afd5"}
+{"id":"code:marcelsamyn-org/book:b8c6be102363801c86eb2f74b042336023dc2a82","source":"code_commit","date":"2026-09-06","repo":"marcelsamyn-org/book","message":"✏️ writing","url":"https://github.com/marcelsamyn-org/book/commit/b8c6be102363801c86eb2f74b042336023dc2a82"}
