@@ -5282,3 +5282,5 @@
 {"id":"ig:story:18040750262830053","source":"ig_story","date":"2026-10-01","url":"https://www.instagram.com/stories/marcel.samyn/3998330700838758674"}
 {"id":"ig:18412844074080746","source":"ig_reel","date":"2026-10-02","durationSec":0,"url":"https://www.instagram.com/reel/Dd_9zTZIQ0t/"}
 {"id":"ig:story:18114550723838133","source":"ig_story","date":"2026-10-02","url":"https://www.instagram.com/stories/marcel.samyn/3999194245219030395"}
+{"id":"book:733031eee5e3b082e44c2eb49a43488ef296d457","source":"book_commit","date":"2026-10-03","linesAdded":134,"message":"✏️ writing: hallucinations rewrite, persona sources and story line"}
+{"id":"code:marcelsamyn-org/book:733031eee5e3b082e44c2eb49a43488ef296d457","source":"code_commit","date":"2026-10-03","repo":"marcelsamyn-org/book","message":"✏️ writing: hallucinations rewrite, persona sources and story line","url":"https://github.com/marcelsamyn-org/book/commit/733031eee5e3b082e44c2eb49a43488ef296d457"}
