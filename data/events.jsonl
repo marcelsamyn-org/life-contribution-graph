@@ -5339,3 +5339,5 @@
 {"id":"ig:story:18109231205065004","source":"ig_story","date":"2026-10-07","url":"https://www.instagram.com/stories/marcel.samyn/4002948274965304001"}
 {"id":"ig:story:17924879136430996","source":"ig_story","date":"2026-10-07","url":"https://www.instagram.com/stories/marcel.samyn/4002739743447616324"}
 {"id":"code:marcelsamyn-org/petals:0acea43cdd61068cfc21ed0893bd03cf24b0fcc1","source":"code_commit","date":"2026-10-07","repo":"marcelsamyn-org/petals","message":"♻️ refactor(db): move Radar tables into their own schema file","url":"https://github.com/marcelsamyn-org/petals/commit/0acea43cdd61068cfc21ed0893bd03cf24b0fcc1"}
+{"id":"ig:story:18034115936895386","source":"ig_story","date":"2026-10-10","url":"https://www.instagram.com/stories/marcel.samyn/4004806812717146293"}
+{"id":"book:d2fd681528f3718317f3e69a3d8316aa62303c82","source":"book_commit","date":"2026-10-10","linesAdded":440,"message":"📚 docs(happiness): add verified research citations"}
