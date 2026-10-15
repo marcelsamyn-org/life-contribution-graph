@@ -5357,3 +5357,5 @@
 {"id":"ig:story:18118901350982168","source":"ig_story","date":"2026-10-14","url":"https://www.instagram.com/stories/marcel.samyn/4007882242605016210"}
 {"id":"book:ec1c8c5121ab97708db4d5a1de0ace2c56559167","source":"book_commit","date":"2026-10-15","linesAdded":40,"message":"🚀 perf(export): embed compressed JPEG illustrations in the ebooks"}
 {"id":"code:marcelsamyn-org/book:ec1c8c5121ab97708db4d5a1de0ace2c56559167","source":"code_commit","date":"2026-10-15","repo":"marcelsamyn-org/book","message":"🚀 perf(export): embed compressed JPEG illustrations in the ebooks","url":"https://github.com/marcelsamyn-org/book/commit/ec1c8c5121ab97708db4d5a1de0ace2c56559167"}
+{"id":"ig:story:18096362966411482","source":"ig_story","date":"2026-10-15","url":"https://www.instagram.com/stories/marcel.samyn/4008453997806969342"}
+{"id":"code:marcelsamyn-org/petals:7d48e4844be969469afca57d349e4fecb6e5a3e4","source":"code_commit","date":"2026-10-07","repo":"marcelsamyn-org/petals","message":"🐛 fix(query): build every query key from queryKeys","url":"https://github.com/marcelsamyn-org/petals/commit/7d48e4844be969469afca57d349e4fecb6e5a3e4"}
