@@ -5425,3 +5425,6 @@
 {"id":"code:marcelsamyn-org/book:bfd500b39f14a7666492f4caef1e03207a6b162f","source":"code_commit","date":"2026-10-25","repo":"marcelsamyn-org/book","message":"✏️ writing: resolve the last TODOs with three citations and the Sorry Tape photo","url":"https://github.com/marcelsamyn-org/book/commit/bfd500b39f14a7666492f4caef1e03207a6b162f"}
 {"id":"book:456fb02eae1e1ff17c33050830f6b66c0b26e365","source":"book_commit","date":"2026-10-26","linesAdded":347,"message":"✨ feat(cover): add an adjustable paperback wrap design"}
 {"id":"code:marcelsamyn-org/book:456fb02eae1e1ff17c33050830f6b66c0b26e365","source":"code_commit","date":"2026-10-26","repo":"marcelsamyn-org/book","message":"✨ feat(cover): add an adjustable paperback wrap design","url":"https://github.com/marcelsamyn-org/book/commit/456fb02eae1e1ff17c33050830f6b66c0b26e365"}
+{"id":"ig:story:18081138068432014","source":"ig_story","date":"2026-10-26","url":"https://www.instagram.com/stories/marcel.samyn/4016460610828242643"}
+{"id":"book:299d605569c9c093b101e3bb9b2710e75f81aa68","source":"book_commit","date":"2026-10-26","linesAdded":3,"message":"🎨 style(cover): lower the main title"}
+{"id":"book:23d2b4cec7825dae6ac5b3806ef5653eabe624ea","source":"book_commit","date":"2026-10-26","linesAdded":92,"message":"✨ feat(export): add an introduction teaser and separate cover images"}
