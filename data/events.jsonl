@@ -5429,3 +5429,11 @@
 {"id":"book:299d605569c9c093b101e3bb9b2710e75f81aa68","source":"book_commit","date":"2026-10-26","linesAdded":3,"message":"🎨 style(cover): lower the main title"}
 {"id":"book:23d2b4cec7825dae6ac5b3806ef5653eabe624ea","source":"book_commit","date":"2026-10-26","linesAdded":92,"message":"✨ feat(export): add an introduction teaser and separate cover images"}
 {"id":"ig:story:17917907652500276","source":"ig_story","date":"2026-10-26","url":"https://www.instagram.com/stories/marcel.samyn/4016610200428967678"}
+{"id":"yt:zNSrpi933hE","source":"youtube_short","date":"2026-10-27","durationSec":48,"title":"We need a mind gym","url":"https://www.youtube.com/watch?v=zNSrpi933hE"}
+{"id":"ig:18099816149535968","source":"ig_reel","date":"2026-10-27","durationSec":0,"url":"https://www.instagram.com/reel/De_xtL8xhG0/"}
+{"id":"ig:story:18105753707635785","source":"ig_story","date":"2026-10-27","url":"https://www.instagram.com/stories/marcel.samyn/4017289257177690414"}
+{"id":"ig:story:18109304162264450","source":"ig_story","date":"2026-10-27","url":"https://www.instagram.com/stories/marcel.samyn/4017258911249127962"}
+{"id":"ig:story:17975849633942870","source":"ig_story","date":"2026-10-27","url":"https://www.instagram.com/stories/marcel.samyn/4017192027825482916"}
+{"id":"ig:story:18015202571970560","source":"ig_story","date":"2026-10-27","url":"https://www.instagram.com/stories/marcel.samyn/4017150520489783051"}
+{"id":"book:8cfe2437b758aad2fb39bc5ad00eb5b021035d39","source":"book_commit","date":"2026-10-27","linesAdded":7,"message":"📚 docs(editorial): add a next-edition item for a contributing-with-AI epilogue"}
+{"id":"code:marcelsamyn-org/book:8cfe2437b758aad2fb39bc5ad00eb5b021035d39","source":"code_commit","date":"2026-10-27","repo":"marcelsamyn-org/book","message":"📚 docs(editorial): add a next-edition item for a contributing-with-AI epilogue","url":"https://github.com/marcelsamyn-org/book/commit/8cfe2437b758aad2fb39bc5ad00eb5b021035d39"}
