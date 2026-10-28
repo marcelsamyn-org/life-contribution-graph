@@ -5451,3 +5451,6 @@
 {"id":"ig:story:18133761331819289","source":"ig_story","date":"2026-10-28","url":"https://www.instagram.com/stories/marcel.samyn/4017857883282702170"}
 {"id":"book:26ce9bcb5d88d02413fb34152cd9609d1e6df351","source":"book_commit","date":"2026-10-28","linesAdded":16,"message":"📚 docs(design): retain paperback and listing decisions"}
 {"id":"book:88a33413f17ef3ba5b0db58f845bb6c2ffd432be","source":"book_commit","date":"2026-10-28","linesAdded":605,"message":"📚 docs(publishing): retain the v1.0.0 release and print records"}
+{"id":"ig:story:18601335565066982","source":"ig_story","date":"2026-10-28","url":"https://www.instagram.com/stories/marcel.samyn/4018022251219759709"}
+{"id":"ig:story:18648948589028435","source":"ig_story","date":"2026-10-28","url":"https://www.instagram.com/stories/marcel.samyn/4018000025384750696"}
+{"id":"book:3fd7a67cddb15c90bdd10b586e950cee09b5b2da","source":"book_commit","date":"2026-10-28","linesAdded":633,"message":"📚 docs(publishing): retain v1.0.0 assets through the release"}
