@@ -5454,3 +5454,8 @@
 {"id":"ig:story:18601335565066982","source":"ig_story","date":"2026-10-28","url":"https://www.instagram.com/stories/marcel.samyn/4018022251219759709"}
 {"id":"ig:story:18648948589028435","source":"ig_story","date":"2026-10-28","url":"https://www.instagram.com/stories/marcel.samyn/4018000025384750696"}
 {"id":"book:3fd7a67cddb15c90bdd10b586e950cee09b5b2da","source":"book_commit","date":"2026-10-28","linesAdded":633,"message":"📚 docs(publishing): retain v1.0.0 assets through the release"}
+{"id":"ig:17997912729058495","source":"ig_reel","date":"2026-10-29","durationSec":0,"url":"https://www.instagram.com/reel/DfEs7ZCR0K8/"}
+{"id":"ig:story:18073006802771838","source":"ig_story","date":"2026-10-29","url":"https://www.instagram.com/stories/marcel.samyn/4018536823324248487"}
+{"id":"ig:story:18449075359122840","source":"ig_story","date":"2026-10-29","url":"https://www.instagram.com/stories/marcel.samyn/4018450024996397596"}
+{"id":"code:marcelsamyn-org/petals:b6d31d6a2eb3672994116d48c26affe8d4bdf30b","source":"code_commit","date":"2026-10-29","repo":"marcelsamyn-org/petals","message":"🐛 fix(observability): report production server errors to Sentry (#443)","url":"https://github.com/marcelsamyn-org/petals/commit/b6d31d6a2eb3672994116d48c26affe8d4bdf30b"}
+{"id":"code:marcelsamyn-org/petals:ce0730abea5609fa38199430b4f6cea60352d0ca","source":"code_commit","date":"2026-10-29","repo":"marcelsamyn-org/petals","message":"🐛 fix(radar): index snapshot evidence by its evidence foreign key (#445)","url":"https://github.com/marcelsamyn-org/petals/commit/ce0730abea5609fa38199430b4f6cea60352d0ca"}
