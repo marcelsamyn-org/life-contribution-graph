@@ -5466,3 +5466,4 @@
 {"id":"ig:story:17898301887413247","source":"ig_story","date":"2026-10-30","url":"https://www.instagram.com/stories/marcel.samyn/4019547790099203634"}
 {"id":"code:marcelsamyn-org/petals:4915841879ecdeb46f281261c0f146324f27da0f","source":"code_commit","date":"2026-10-31","repo":"marcelsamyn-org/petals","message":"🐛 fix(tasks): link owned memory across partitions (#446)","url":"https://github.com/marcelsamyn-org/petals/commit/4915841879ecdeb46f281261c0f146324f27da0f"}
 {"id":"ig:story:18137916484631836","source":"ig_story","date":"2026-10-31","url":"https://www.instagram.com/stories/marcel.samyn/4020126911044143076"}
+{"id":"code:marcelsamyn-org/petals:cf532b08eaa9e791fc4fb91965f6e5c61cbd54b7","source":"code_commit","date":"2026-10-31","repo":"marcelsamyn-org/petals","message":"🐛 fix(api): accept tool results without progress metadata (#447)","url":"https://github.com/marcelsamyn-org/petals/commit/cf532b08eaa9e791fc4fb91965f6e5c61cbd54b7"}
