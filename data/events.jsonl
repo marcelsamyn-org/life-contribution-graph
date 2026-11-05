@@ -5478,3 +5478,9 @@
 {"id":"ig:18039526133849919","source":"ig_reel","date":"2026-11-04","durationSec":0,"url":"https://www.instagram.com/reel/DfUgZLvRJt0/"}
 {"id":"ig:story:18598117360070304","source":"ig_story","date":"2026-11-04","url":"https://www.instagram.com/stories/marcel.samyn/4022985079311653642"}
 {"id":"ig:story:18228594367338336","source":"ig_story","date":"2026-11-04","url":"https://www.instagram.com/stories/marcel.samyn/4022984971702611916"}
+{"id":"book:c374b426b6d9c33293a8bbb1df303c5d3ac6b565","source":"book_commit","date":"2026-11-05","linesAdded":16,"message":"🎨 style(print): improve adversity chart legibility"}
+{"id":"book:3afa763046387df3481ccf53b1bca0f35e25da28","source":"book_commit","date":"2026-11-05","linesAdded":11,"message":"🎨 style(print): refine paperback interior typography"}
+{"id":"book:a9ec31a202b8753f223678a9bc9cab2af2847207","source":"book_commit","date":"2026-11-05","linesAdded":3,"message":"🎨 style(cover): lower the paperback title group"}
+{"id":"code:marcelsamyn-org/book:c374b426b6d9c33293a8bbb1df303c5d3ac6b565","source":"code_commit","date":"2026-11-05","repo":"marcelsamyn-org/book","message":"🎨 style(print): improve adversity chart legibility","url":"https://github.com/marcelsamyn-org/book/commit/c374b426b6d9c33293a8bbb1df303c5d3ac6b565"}
+{"id":"code:marcelsamyn-org/book:3afa763046387df3481ccf53b1bca0f35e25da28","source":"code_commit","date":"2026-11-05","repo":"marcelsamyn-org/book","message":"🎨 style(print): refine paperback interior typography","url":"https://github.com/marcelsamyn-org/book/commit/3afa763046387df3481ccf53b1bca0f35e25da28"}
+{"id":"code:marcelsamyn-org/book:a9ec31a202b8753f223678a9bc9cab2af2847207","source":"code_commit","date":"2026-11-05","repo":"marcelsamyn-org/book","message":"🎨 style(cover): lower the paperback title group","url":"https://github.com/marcelsamyn-org/book/commit/a9ec31a202b8753f223678a9bc9cab2af2847207"}
