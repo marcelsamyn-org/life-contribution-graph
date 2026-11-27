@@ -5523,3 +5523,4 @@
 {"id":"ig:story:18131147020883931","source":"ig_story","date":"2026-11-25","url":"https://www.instagram.com/stories/marcel.samyn/4038473247963242987"}
 {"id":"ig:17906405382370583","source":"ig_reel","date":"2026-11-26","durationSec":0,"url":"https://www.instagram.com/reel/DgOF72iRCKs/"}
 {"id":"ig:story:18141268348784254","source":"ig_story","date":"2026-11-26","url":"https://www.instagram.com/stories/marcel.samyn/4039193426250832062"}
+{"id":"code:marcelsamyn-org/petals:8578bd475c4193a838670a372041a2efd054baea","source":"code_commit","date":"2026-11-26","repo":"marcelsamyn-org/petals","message":"📚 docs(emails): drop the MailerSend retirement note","url":"https://github.com/marcelsamyn-org/petals/commit/8578bd475c4193a838670a372041a2efd054baea"}
